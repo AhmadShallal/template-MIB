@@ -1,0 +1,325 @@
+body {
+  font-family: 'Tahoma', 'Arial';
+  font-size: 1.125rem;
+  background-color: #ddd;
+  margin: 0;
+  overflow-x: hidden;
+  /* header */
+  /* sections */ }
+  body h2 {
+    font-size: 2.8125rem;
+    line-height: 1.2;
+    margin: 0 0 0.875rem;
+    margin-bottom: 0.875rem;
+    letter-spacing: -1px; }
+  body p {
+    margin: 0 auto 1.875rem; }
+  body .navbar {
+    z-index: 9;
+    list-style: none;
+    background: #333;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%; }
+    body .navbar.scrolled {
+      background: rgba(51, 51, 51, 0.5);
+      transition: background-color 200ms linear; }
+  body .navbar li {
+    display: inline-block;
+    padding: 10px; }
+  body .navbar li a {
+    text-decoration: none;
+    color: #eee; }
+  body .navbar li a.active {
+    color: #ffea00; }
+  body .intro,
+  body .text-wrapper {
+    position: relative; }
+  body .intro {
+    height: 527px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    background-color: #ddd; }
+    @media screen and (max-width: 1000px) {
+      body .intro {
+        display: block;
+        height: auto;
+        overflow: visible; } }
+    body .intro .text-wrapper {
+      top: 4em;
+      left: 50%;
+      margin-left: -450px;
+      max-width: 340px; }
+      @media screen and (max-width: 1000px) {
+        body .intro .text-wrapper {
+          display: block;
+          width: 100%;
+          text-align: center;
+          left: unset;
+          margin: 0 auto; } }
+      body .intro .text-wrapper h2 {
+        line-height: 1;
+        font-size: 54px;
+        font-weight: bold; }
+      body .intro .text-wrapper p {
+        margin-top: 20px;
+        font-size: 22px; }
+    body .intro .image {
+      position: absolute;
+      top: -0.5em;
+      margin-left: -11px;
+      width: 420px;
+      height: 500px;
+      background: url("../images/Men-in-Black.jpg") no-repeat center;
+      background-size: auto auto;
+      background-size: contain;
+      left: 50%;
+      z-index: -5;
+      transform: translateZ(-0.3px) scale(1.2); }
+      @media screen and (max-width: 1000px) {
+        body .intro .image {
+          display: block;
+          text-align: center;
+          top: unset;
+          margin: 0 auto;
+          left: unset;
+          position: static;
+          transform: none; } }
+    body .intro .cover {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: black;
+      transform: translateZ(0);
+      opacity: 0;
+      transition: all 0.5s fade-in-out; }
+      @media screen and (max-width: 1000px) {
+        body .intro .cover {
+          display: none; } }
+  body .block-s {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; }
+    body .block-s .scrollmagic-pin-spacer {
+      position: absolute !important;
+      width: 100%;
+      height: 100% !important;
+      clip: rect(auto, auto, auto, auto); }
+      @media screen and (max-width: 1000px) {
+        body .block-s .scrollmagic-pin-spacer {
+          position: relative; } }
+    body .block-s .pin-wrapper {
+      height: 100%; }
+      @media screen and (max-width: 1000px) {
+        body .block-s .pin-wrapper {
+          position: static; } }
+    @media screen and (max-width: 1000px) {
+      body .block-s {
+        height: 650px;
+        overflow: visible; } }
+    body .block-s .image {
+      margin-left: -527px;
+      width: 50%;
+      height: 400px;
+      position: absolute;
+      background: no-repeat; }
+      @media screen and (max-width: 1000px) {
+        body .block-s .image {
+          margin-left: -50%; } }
+    body .block-s .text {
+      position: absolute;
+      top: -50%;
+      margin-top: -95px;
+      max-width: 290px;
+      left: 60%;
+      opacity: 0.1;
+      transform: translateY(100px);
+      transition: all 0.9s ease-in-out; }
+      body .block-s .text h2 {
+        margin-bottom: 17px;
+        font-size: 52px;
+        line-height: 1; }
+      body .block-s .text p {
+        line-height: 1.5; }
+      @media screen and (max-width: 1000px) {
+        body .block-s .text {
+          opacity: 1;
+          transform: translateY(0);
+          top: 0;
+          margin-top: 0;
+          left: 50%; } }
+      body .block-s .text.text-animate {
+        opacity: 1;
+        transform: translateY(0); }
+  body .services-block .pin-wrapper {
+    background-color: #dadada;
+    /*
+.middle {
+    margin-left: ;
+    width: ;
+    height: ;
+    background-image: ;
+}
+.back {
+    margin-left: ;
+    width: ;
+    height: ;
+    background-image: ;
+}
+.front-top {
+    margin-left: ;
+    width: ;
+    height: ;
+    background-image: ;
+}
+.front-bottom {
+    margin-left: ;
+    width: ;
+    height: ;
+    background-image: ;
+}
+.front-bottom,
+.front-top {
+    top: 50%;
+}*/ }
+    body .services-block .pin-wrapper .text {
+      top: 50%; }
+      @media screen and (max-width: 1000px) {
+        body .services-block .pin-wrapper .text {
+          top: 0; } }
+    body .services-block .pin-wrapper .image {
+      top: 50%;
+      margin-top: -200px;
+      left: 50%;
+      background-size: contain;
+      background-image: url(../images/alien1.jpg);
+      /*
+      top: 50%;
+      margin-top: -200px;
+      width: 50%;
+      height: 463px;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;*/ }
+      @media screen and (max-width: 1000px) {
+        body .services-block .pin-wrapper .image {
+          top: 0;
+          margin-top: 0; } }
+    body .services-block .pin-wrapper .image,
+    body .services-block .pin-wrapper .middle,
+    body .services-block .pin-wrapper .back,
+    body .services-block .pin-wrapper .front-top,
+    body .services-block .pin-wrapper .front-bottom {
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-position: center; }
+  body .solutions-block .pin-wrapper {
+    background-color: #dadada; }
+    body .solutions-block .pin-wrapper .text {
+      top: -50%; }
+      @media screen and (max-width: 1000px) {
+        body .solutions-block .pin-wrapper .text {
+          top: 0; } }
+    body .solutions-block .pin-wrapper .image {
+      top: -50%;
+      left: 50%;
+      margin-top: -200px;
+      margin-left: -327px;
+      background-size: contain;
+      background-image: url(../images/alien2.jpg);
+      /*
+      top: -50%;
+      margin-top: -200px;
+      width: 50%;
+      height: 463px;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;*/ }
+      @media screen and (max-width: 1000px) {
+        body .solutions-block .pin-wrapper .image {
+          top: 0;
+          margin-top: 0; } }
+    body .solutions-block .pin-wrapper .middle,
+    body .solutions-block .pin-wrapper .bacc {
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-position: center; }
+      @media screen and (max-width: 1000px) {
+        body .solutions-block .pin-wrapper .middle,
+        body .solutions-block .pin-wrapper .bacc {
+          display: none; } }
+    body .solutions-block .pin-wrapper .middle {
+      width: 1076px;
+      height: 472px;
+      top: -88%;
+      margin-left: -630px;
+      background-image: url(https://assets.railsware.com/images/services/web/consumer-middle-medium-b58d4f41.png); }
+    body .solutions-block .pin-wrapper .bacc {
+      width: 1076px;
+      height: 472px;
+      top: -88%;
+      margin-left: -680px;
+      background-image: url(https://assets.railsware.com/images/services/web/consumer-back-medium-3597eeb1.png); }
+  body .products-block .pin-wrapper {
+    background-color: #dadada; }
+    body .products-block .pin-wrapper .text {
+      top: -50%; }
+      @media screen and (max-width: 1000px) {
+        body .products-block .pin-wrapper .text {
+          top: 0; } }
+    body .products-block .pin-wrapper .image {
+      top: -50%;
+      left: 50%;
+      margin-top: -200px;
+      margin-left: -327px;
+      background-size: contain;
+      background-image: url(../images/alien3.jpg);
+      /*top: -50%;
+      margin-top: -200px;
+      width: 50%;
+      height: 463px;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;*/ }
+      @media screen and (max-width: 1000px) {
+        body .products-block .pin-wrapper .image {
+          top: 0;
+          margin-top: 0; } }
+    body .products-block .pin-wrapper .front,
+    body .products-block .pin-wrapper .bacc {
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: -88%; }
+      @media screen and (max-width: 1000px) {
+        body .products-block .pin-wrapper .front,
+        body .products-block .pin-wrapper .bacc {
+          display: none; } }
+  body .products-block .front {
+    margin-left: -595px;
+    width: 713px;
+    height: 383px;
+    background-image: url(https://assets.railsware.com/images/services/web/entertainment-front-medium-302d4299.png); }
+  body .products-block .bacc {
+    margin-left: -610px;
+    width: 726px;
+    height: 384px;
+    background-image: url(https://assets.railsware.com/images/services/web/entertainment-back-medium-39119f92.png); }
+  body .contact-section {
+    z-index: 8; }
+    body .contact-section .card-body {
+      background-color: #dadada; }
+  body .block-main {
+    padding: 0;
+    margin: 0;
+    display: block; }
+
+/*# sourceMappingURL=style.css.map */

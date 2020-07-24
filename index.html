@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Template #2</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <li><a href="#" data-scroll="home">Home</a></li>
+        <!-- <li><a href="#" data-scroll="about">About Us</a></li> -->
+        <li><a href="#" data-scroll="services">Alien 1</a></li>
+        <li><a href="#" data-scroll="solutions">Alien 2</a></li>
+        <li><a href="#" data-scroll="products">Alien 3</a></li>
+        <li><a href="#" data-scroll="contact">Explore</a></li>
+    </ul>
+
+    <section id="home" class="block section intro">
+        <!-- <h2 class="text-center">Home</h2> -->
+        <div class="text-wrapper">
+            <h2>From idea to real product</h2>
+            <p> Product idea might well be the only thing required to start working with us. You have one already? Let's bring it to life together! </p>
+        </div>
+        <div class="image"></div>
+        <div class="cover"></div>
+    </section>
+
+    <div class="block-main">
+        <div id="services" class="block-s section services-block">
+            <div class="pin-wrapper">
+                <!-- <div class="back"></div>
+                <div class="middle"></div> -->
+                <div class="image"></div>
+                <!-- <div class="front-bottom"></div>
+                <div class="front-top"></div> -->
+                <div class="text">
+                    <h2>Discover Men In Black Aliens</h2>
+                    <p>Smart and effective solutions for your business. Clean, intuitive, extremely easy to use.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="solutions" class="block-s section solutions-block">
+            <div class="pin-wrapper">
+                <div class="bacc"></div>
+                <div class="middle"></div>
+                <div class="image"></div>
+                <div class="text">
+                    <h2>Discover Men In Black Aliens</h2>
+                    <p>Smart and effective solutions for your business. Clean, intuitive, extremely easy to use.</p>
+                </div>
+
+            </div>
+        </div>
+        <div id="products" class="block-s section products-block">
+            <div class="pin-wrapper">
+                <div class="bacc"></div>
+                <div class="image"></div>
+                <div class="text">
+                    <h2>Discover Men In Black Aliens</h2>
+                    <p>Smart and effective solutions for your business. Clean, intuitive, extremely easy to use.</p>
+                </div>
+                <div class="front"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <section id="contact" class="block text-center section contact-section container py-5">
+        <h2 class="text-center py-2 mb-4">Explore MIB Aliens</h2>
+        <div class="alien-list row mx-auto"></div>
+        <button id="load-all" class="btn btn-info mt-4">Load More Aliens</button>
+        <script id="alien-list-template" type="text/x-handlebars-template">
+            {{#each items}}
+            <div class="alien col-6 card my-2">
+                <img class="img-thumbnail" src="{{#if thumbnail}}{{thumbnail}}.jpg{{else}}https://via.placeholder.com/200/150/{{/if}}" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text"><strong>{{title}}</strong></br>{{abstract}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </script>
+    </section>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'></script>
+    <script src="js/scrollMagic/TweenMax.min.js"></script>
+
+    <script src='js/scrollMagic/ScrollMagic.min.js'></script>
+    <script src="js/scrollMagic/animation.js"></script>
+    <script src="js/scrollMagic/ScrollToPlugin.min.js"></script>
+
+    <script src="js/scrollMagic/handlebars.js"></script>
+    <script src="js/cross-origin.js"></script>
+    <script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

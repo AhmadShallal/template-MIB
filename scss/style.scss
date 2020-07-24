@@ -1,0 +1,405 @@
+body {
+    font-family: 'Tahoma', 'Arial';
+    font-size: 1.125rem;
+    background-color: #ddd;
+    //position: relative;
+    margin: 0;
+    overflow-x: hidden;
+    h2 {
+        font-size: 2.8125rem;
+        line-height: 1.2;
+        margin: 0 0 0.875rem;
+        margin-bottom: 0.875rem;
+        letter-spacing: -1px;
+    }
+    p {
+        margin: 0 auto 1.875rem;
+    }
+    /* header */
+    .navbar {
+        z-index: 9;
+        list-style: none;
+        background: #333;
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        &.scrolled {
+            background: rgba(51, 51, 51, 0.5);
+            transition: background-color 200ms linear;
+        }
+    }
+    .navbar li {
+        display: inline-block;
+        padding: 10px;
+    }
+    .navbar li a {
+        text-decoration: none;
+        color: #eee;
+    }
+    .navbar li a.active {
+        color: #ffea00;
+    }
+    /* sections */
+    .block {
+        //height: 1100px;
+        //perspective: 2px;
+    }
+    .intro,
+    .text-wrapper {
+        position: relative;
+    }
+    .intro {
+        height: 527px;
+        @media screen and( max-width: 1000px) {
+            display: block;
+            height: auto;
+            overflow: visible;
+        }
+        overflow: hidden;
+        transform-style: preserve-3d;
+        background-color: #ddd;
+        .text-wrapper {
+            top: 4em;
+            left: 50%;
+            margin-left: -450px;
+            max-width: 340px;
+            @media screen and( max-width: 1000px) {
+                display: block;
+                width: 100%;
+                text-align: center;
+                left: unset;
+                margin: 0 auto;
+            }
+            h2 {
+                line-height: 1;
+                font-size: 54px;
+                font-weight: bold;
+            }
+            p {
+                margin-top: 20px;
+                font-size: 22px;
+            }
+        }
+        .image {
+            position: absolute;
+            top: -0.5em;
+            margin-left: -11px;
+            width: 420px;
+            height: 500px;
+            background: url("../images/Men-in-Black.jpg") no-repeat center;
+            background-size: auto auto;
+            background-size: contain;
+            left: 50%;
+            z-index: -5;
+            transform: translateZ(-0.3px) scale(1.2);
+            @media screen and( max-width: 1000px) {
+                display: block;
+                //width: 100%;
+                text-align: center;
+                top: unset;
+                margin: 0 auto;
+                left: unset;
+                position: static;
+                transform: none;
+            }
+        }
+        .cover {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: black;
+            transform: translateZ(0);
+            opacity: 0;
+            transition: all 0.5s fade-in-out;
+            @media screen and( max-width: 1000px) {
+                display: none;
+            }
+        }
+    }
+    #about {
+        //transform: translateZ(90px);
+    }
+    //.about {
+    .block-s {
+        .scrollmagic-pin-spacer {
+            position: absolute !important;
+            width: 100%;
+            height: 100% !important;
+            clip: rect(auto, auto, auto, auto);
+            @media screen and( max-width: 1000px) {
+                position: relative;
+            }
+        }
+        .pin-wrapper {
+            //overflow: hidden;
+            height: 100%;
+            @media screen and( max-width: 1000px) {
+                position: static;
+            }
+            //padding: 2em 0;
+            //background: no-repeat center;
+        }
+        position: relative;
+        height: 100vh;
+        //position: absolute;
+        //z-index: 0;
+        overflow: hidden;
+        // height: 100%;
+        //max-height: 1078px;
+        @media screen and( max-width: 1000px) {
+            height: 650px;
+            overflow: visible;
+        }
+        .image {
+            margin-left: -527px;
+            width: 50%;
+            height: 400px;
+            position: absolute;
+            background: no-repeat;
+            //z-index: 6;
+            @media screen and( max-width: 1000px) {
+                margin-left: -50%;
+            }
+        }
+        .text {
+            position: absolute;
+            top: -50%;
+            margin-top: -95px;
+            max-width: 290px;
+            left: 60%;
+            opacity: 0.1;
+            transform: translateY(100px);
+            transition: all 0.9s ease-in-out;
+            h2 {
+                margin-bottom: 17px;
+                font-size: 52px;
+                line-height: 1;
+            }
+            p {
+                line-height: 1.5;
+            }
+            @media screen and( max-width: 1000px) {
+                opacity: 1;
+                transform: translateY(0);
+                top: 0;
+                margin-top: 0;
+                left: 50%;
+            }
+            &.text-animate {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+    .services-block {
+        .pin-wrapper {
+            //z-index: 2;
+            background-color: #dadada;
+            //background-color: red;
+            .text {
+                top: 50%;
+                @media screen and( max-width: 1000px) {
+                    top: 0;
+                    //margin-top: 0;
+                }
+            }
+            .image {
+                top: 50%;
+                margin-top: -200px;
+                left: 50%;
+                background-size: contain;
+                background-image: url(../images/alien1.jpg);
+                /*
+                top: 50%;
+                margin-top: -200px;
+                width: 50%;
+                height: 463px;
+                position: absolute;
+                background-size: contain;
+                background-repeat: no-repeat;*/
+                @media screen and( max-width: 1000px) {
+                    top: 0;
+                    margin-top: 0;
+                }
+            }
+            .image,
+            .middle,
+            .back,
+            .front-top,
+            .front-bottom {
+                position: absolute;
+                left: 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            /*
+        .middle {
+            margin-left: ;
+            width: ;
+            height: ;
+            background-image: ;
+        }
+        .back {
+            margin-left: ;
+            width: ;
+            height: ;
+            background-image: ;
+        }
+        .front-top {
+            margin-left: ;
+            width: ;
+            height: ;
+            background-image: ;
+        }
+        .front-bottom {
+            margin-left: ;
+            width: ;
+            height: ;
+            background-image: ;
+        }
+        .front-bottom,
+        .front-top {
+            top: 50%;
+        }*/
+        }
+    }
+    .solutions-block {
+        .pin-wrapper {
+            //z-index: 3;
+            background-color: #dadada;
+            .text {
+                top: -50%;
+                @media screen and( max-width: 1000px) {
+                    top: 0;
+                    // margin-top: 0;
+                }
+            }
+            .image {
+                top: -50%;
+                left: 50%;
+                margin-top: -200px;
+                margin-left: -327px;
+                ;
+                background-size: contain;
+                background-image: url(../images/alien2.jpg);
+                /*
+                top: -50%;
+                margin-top: -200px;
+                width: 50%;
+                height: 463px;
+                position: absolute;
+                background-size: contain;
+                background-repeat: no-repeat;*/
+                @media screen and( max-width: 1000px) {
+                    top: 0;
+                    margin-top: 0;
+                }
+            }
+            .middle,
+            .bacc,
+            {
+                position: absolute;
+                left: 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+                @media screen and( max-width: 1000px) {
+                    display: none;
+                }
+            }
+            .middle {
+                width: 1076px;
+                height: 472px;
+                top: -88%;
+                margin-left: -630px;
+                background-image: url(https://assets.railsware.com/images/services/web/consumer-middle-medium-b58d4f41.png);
+            }
+            .bacc {
+                width: 1076px;
+                height: 472px;
+                top: -88%;
+                margin-left: -680px;
+                background-image: url(https://assets.railsware.com/images/services/web/consumer-back-medium-3597eeb1.png);
+            }
+        }
+    }
+    .products-block {
+        .pin-wrapper {
+            //z-index: 4;
+            background-color: #dadada;
+            //background-color: blue;
+            .text {
+                top: -50%;
+                @media screen and( max-width: 1000px) {
+                    top: 0;
+                    //margin-top: 0;
+                }
+            }
+            .image {
+                top: -50%;
+                left: 50%;
+                margin-top: -200px;
+                margin-left: -327px;
+                background-size: contain;
+                background-image: url(../images/alien3.jpg);
+                /*top: -50%;
+                margin-top: -200px;
+                width: 50%;
+                height: 463px;
+                position: absolute;
+                background-size: contain;
+                background-repeat: no-repeat;*/
+                @media screen and( max-width: 1000px) {
+                    top: 0;
+                    margin-top: 0;
+                }
+            }
+            .front,
+            .bacc,
+            {
+                position: absolute;
+                left: 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+                top: -88%;
+                @media screen and( max-width: 1000px) {
+                    display: none;
+                }
+            }
+        }
+        //}
+        .front {
+            margin-left: -595px;
+            width: 713px;
+            height: 383px;
+            background-image: url(https://assets.railsware.com/images/services/web/entertainment-front-medium-302d4299.png);
+        }
+        .bacc {
+            margin-left: -610px;
+            width: 726px;
+            height: 384px;
+            background-image: url(https://assets.railsware.com/images/services/web/entertainment-back-medium-39119f92.png);
+        }
+    }
+    .contact-section {
+        //position: relative;
+        z-index: 8;
+        //height: 600px;
+        //display: flex;
+        h2 {
+            //position: absolute;
+        }
+        .card-body {
+            background-color: #dadada;
+        }
+    }
+    .block-main {
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+}
